@@ -1,0 +1,15 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+Does not create an initial commit but prepares you to.
+Commands:
+git init - from within appropriate directory
+git status - to check on status and see what is being tracked/has changed
+
+Staging area - adding and removing
+git add FILE NAME
+git reset FILE NAME
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+Allows you to mix and match files without formally committing them
+Gives you essentially a second chance to check your work before committing
