@@ -9,7 +9,67 @@ Staging area - adding and removing
 git add FILE NAME
 git reset FILE NAME
 
+
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
 Allows you to mix and match files without formally committing them
 Gives you essentially a second chance to check your work before committing
+
+
+To commit
+git commit
+(will open text editor; save and exit window)
+
+git diff without any arguments will compare working directory to staging area
+git diff --staged compares staging area to last commit
+
+git checkout master - moves back to latest commit on the branch
+
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+If the involved files cross very different aspects of the program's functionality it may not be the right size for a commit
+
+
+Branching
+git branch - shows branches
+git branch NAME - creates new branch with name
+
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+Whenever you create fundamentally different versions of the program or add entirely new features add a branch
+Branches help keep trains of thought separate
+
+
+git log --graph --oneline master OTHER BRANCH - will show visually what commits have been made to branches and the master since they branched
+
+
+If a branch is created off of a commit that is not at the tip of a branch it is likely unreachable and will be lost unless you create a branch with that commit
+
+
+How do the diagrams help you visualize the branch structure?
+
+Makes it easy to see where the branches are coming from
+Makes it easy to find master
+Makes it easy to see parents of each commit
+
+
+git show  - shows difference between a commit and its parents
+
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+You get the best of both branches
+Represented because you don't lose the prior commits on either branch
+
+
+git merge OTHER BRANCH - always knows that you want to merge it with the branch that is checked out
+
+
+If a merge conflict arises
+RESOLVE ISSUE
+git status
+git add PROBLEM FILE
+git status
+git commit
